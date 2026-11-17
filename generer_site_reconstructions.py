@@ -223,7 +223,7 @@ def generer_index() -> None:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reconstructions 3D - Projet PRONTO</title>
+  <title>Structured-Light 3D Gallery</title>
   <style>
     body {{ margin:0; min-height:100vh; font-family:Arial,sans-serif; background:#f7f7f5; color:#171717; display:grid; place-items:center; }}
     main {{ width:min(980px, calc(100vw - 40px)); padding:34px 0; }}
@@ -237,8 +237,8 @@ def generer_index() -> None:
 </head>
 <body>
   <main>
-    <h1>Reconstructions 3D</h1>
-    <p>Vues interactives des reconstructions finales de notre projet PRONTO.</p>
+    <h1>Structured-Light 3D Gallery</h1>
+    <p>Explore interactive point clouds captured with a structured-light 3D scanner.</p>
     <div class="grid">
 {liens}
     </div>
@@ -263,11 +263,6 @@ def main() -> None:
         (WEB / fichier).write_text(html_vue(titre, data, slider, gradient_defaut), encoding="utf-8")
 
     generer_index()
-    (WEB / "README.md").write_text(
-        "# Reconstructions 3D - Projet PRONTO\n\n"
-        "Site statique contenant les vues HTML interactives des reconstructions retenues pour le rapport.\n",
-        encoding="utf-8",
-    )
 
 
 if __name__ == "__main__":
